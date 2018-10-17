@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Api文档</title>
+	<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+	<table class="table">
+		<tr><td>url</td><td>/cookie/webtoapp</td></tr>
+		<tr><td>调用方式</td><td>POST</td></tr>
+		<tr><td>名称</td><td>导入cookie</td></tr>
+		<tr><td>示例url</td><td>/</td></tr>
+		<tr><td>必备参数</td><td>cookies</td></tr>
+		<tr><td>返回信息</td><td>见下表</td></tr>
+	</table>
+	<table class="table"><thead><tr><th>Code</th><th>message</th><th>说明/debug</th></tr></thead>
+	<tbody><tr><td>10002</td><td>导入成功^^,同时返回user_id（饼干）</td><td>OK</td></tr>
+	<tr><td>10004</td><td>您无法导入饼干，饼干不存在</td><td>饼干不存在数据库，可能已经被碎，或者提供的是伪造饼干，解决方案:通过网页端生成后再导入或在app内直接生成</td></tr>
+	<tr><td>10001</td><td>您无法导入饼干，请输入饼干</td><td>输入值不可以为空，post请求必须带有cookies参数</td></tr></tbody></table>
+	</div>
+</body>
+</html>
