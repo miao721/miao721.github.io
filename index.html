@@ -20,6 +20,12 @@
 	.label-red{
 background-color: #E74C3C;
 	}
+	.label-info{
+		background-color: transparent;
+		border:1px #1ABC9C solid;
+		padding:8px;
+		color:#1ABC9C;
+	}
 </style>
 <body>
 <div class="container" style="max-width: 850px;margin-top: 18px;">
@@ -34,8 +40,8 @@ background-color: #E74C3C;
         </tr>
       </thead>
       <tbody>
-      <tr><td><a href="/api/1.html">/cookie/webtoapp</a></td><td>饼干导入</td><td style="color:#1ABC9C;width: 38%">导入在网页端中生成的饼干到App</td><td>POST</td></tr>
-      <tr><td><a href="/api/2.html">/getcookie</a></td><td>生成饼干</td><td style="color:#1ABC9C;width: 38%">在App中生成一个八位数的随机字符串用于饼干调用</td><td>GET</td></tr>
+      <tr><td><a href="/api/1.html">/cookie/webtoapp</a></td><td>饼干导入<label class="label label-info">已完成</label></td><td style="color:#1ABC9C;width: 38%">导入在网页端中生成的饼干到App</td><td>POST</td></tr>
+      <tr><td><a href="/api/2.html">/getcookie</a></td><td>生成饼干<label class="label label-info">已完成</label></td><td style="color:#1ABC9C;width: 38%">在App中生成一个八位数的随机字符串用于饼干调用</td><td>GET</td></tr>
       <tr><td><a href="/api/3.html">/board/index</a></td><td>版块列表</td><td style="color:#1ABC9C;width: 38%">列出所有版块的信息，被关闭的不会显示在内</td><td>GET</td></tr>
        <tr><td><a href="/api/4.html">/forum/{id}</a></td><td>主题列表</td><td style="color:#1ABC9C;width: 38%">返回fid={id}的主题</td><td>GET</td></tr>
        <tr><td><a href="/api/5.html">/sublist/{fid}</a></td><td>子论坛列表</td><td style="color:#1ABC9C;width: 38%">返回fid={fid}的所有子论坛信息</td><td>GET</td></tr>
