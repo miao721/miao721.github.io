@@ -7,6 +7,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<button class="btn btn-danger">test</button>
+<div class="container" style="max-width: 820px;margin-top: 5em;">
+<input type="text" name="" class="form-control" placeholder="毫无用处的文本框" />&nbsp;&nbsp;<button class="btn btn-danger">提&nbsp;交</button>
+<table class="table">
+	<thead>
+        <tr>
+          <th>URL</th>
+          <th>名称</th>
+          <th>用途</th>
+          <th>调用方式</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr><td><a href="/api/1.html">/cookie/webtoapp</a></td><td>饼干导入</td><td style="color:#1ABC9C;width: 38%">导入在网页端中生成的饼干到App</td><td>POST</td></tr>
+      <tr><td><a href="/api/2.html">/getcookie</a></td><td>生成饼干</td><td style="color:#1ABC9C;width: 38%">在App中生成一个八位数的随机字符串用于饼干调用</td><td>GET</td></tr>
+      <tr><td><a href="/api/3.html">/board/index</a></td><td>版块列表</td><td style="color:#1ABC9C;width: 38%">列出所有版块的信息，被关闭的不会显示在内</td><td>GET</td></tr>
+       <tr><td><a href="/api/4.html">/forum/{id}</a></td><td>主题列表</td><td style="color:#1ABC9C;width: 38%">返回fid={id}的主题</td><td>GET</td></tr>
+       <tr><td><a href="/api/5.html">/sublist/{fid}</a></td><td>子论坛列表</td><td style="color:#1ABC9C;width: 38%">返回fid={fid}的所有子论坛信息</td><td>GET</td></tr>
+       <tr><td><a href="/api/6.html">/comment</a></td><td>回复</td><td style="color:#1ABC9C;width: 38%">增加一条回复在某个帖子中</td><td>POST</td></tr>
+       <tr><td><a href="/api/7.html">/newtopic</a></td><td>发布新帖</td><td style="color:#1ABC9C;width: 38%">发布一个新的主题帖</td><td>POST</td></tr>
+       <tr><td><a href="/api/8.html">/t/{id}</a></td><td>帖子内容</td><td style="color:#1ABC9C;width: 38%">返回id={id}的主题帖及其回复</td><td>GET</td></tr>
+       <tr><td><a href="/api/9.html">/post/board/{fid}/id/{tid}</a></td><td>帖子内容</td><td style="color:#1ABC9C;width: 38%">返回fid={fid}<b>和</b>tid={tid}的主题帖及其回复</td><td>GET</td></tr>
+       
+      </tbody>
+      
+</table>
+</div>
+
 </body>
 </html>
