@@ -27,6 +27,9 @@ background-color: #E74C3C;
 		color:#8E44AD;
 	}
 </style>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <body>
 <div class="container" style="max-width: 850px;margin-top: 18px;">
 <table class="table">
@@ -53,7 +56,7 @@ background-color: #E74C3C;
       </tbody>
       
 </table>
-<div style="margin-top: 20px; margin-bottom: 10px;"><button class="btn btn-danger" Onclick="window.open('http://www.nmmnm.co/showmsg/forumid/22/id/40')">点击这里访问Api文档1.0</button>&nbsp;&nbsp;&nbsp;<button class="btn btn-danger" Onclick="window.open('http://i4.fuimg.com/626503/493de2056b771de6.jpg')">点击获取安卓App下载二维码</button>&nbsp;&nbsp;&nbsp;<button class="btn btn-danger" Onclick="alert('暂未上线')">点击获取IosApp下载二维码</button></div>
+<div style="margin-top: 20px; margin-bottom: 10px;"><button class="btn btn-danger" Onclick="window.open('http://www.nmmnm.co/showmsg/forumid/22/id/40')">点击这里访问Api文档1.0</button>&nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-danger" data-toggle="modal" data-target="#android">点击获取安卓App下载二维码</button>&nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-danger" data-toggle="modal" data-target="#ios">点击获取IosApp下载二维码</button>&nbsp;&nbsp;&nbsp;&nbsp;</div>
 <div class="alert alert-success">正在开发的API&需要修改的API列表</div>
 <table class="table">
 	<thead><tr><th>名称</th><th>用途/需要更新的部分</th><th>优先级</th><th>状态</th></tr></thead>
@@ -66,5 +69,42 @@ background-color: #E74C3C;
 </table>
 </div>
 <div align="center">对Api有任何疑问，请发送email到<a href="mailto:service@nmmnm.zj.cn">service@nmmnm.zj.cn</a></div>
+<!-- Modal -->
+<div class="modal fade" id="android" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">获取安卓下载二维码</h4>
+      </div>
+      <div class="modal-body">
+       请扫描下方二维码进行下载~<br/>
+       <center><img src="http://i4.fuimg.com/626503/493de2056b771de6.jpg" /></center>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="ios" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">获取ios下载二维码</h4>
+      </div>
+      <div class="modal-body">
+      非常抱歉，ios客户端正在开发中，请期待...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
