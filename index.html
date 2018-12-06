@@ -77,6 +77,11 @@ background-color: #E74C3C;
         </tr>
       </thead>
       <tbody>
+        <tr><td><a href="/api/thread.html">/api/newtopic</a></td><td>添加主题帖<label class="label label-info">☃已完成</label></td><td style="color:#1ABC9C;width: 38%">增加一条主题帖在某个小岛</td><td>POST</td></tr>
+         <tr><td><a href="/api/reply.html">/api/comment</a></td><td>回复<label class="label label-info">☃已完成</label></td><td style="color:#1ABC9C;width: 38%">回复主题帖</td><td>POST</td></tr>
+       <tr><td><a href="/api/11.html">/feed/delete/{id}</a></td><td>删除收藏<label class="label label-info">☃已完成</label></td><td style="color:#1ABC9C;width: 38%">删除某条收藏</td><td>GET</td></tr>
+       <tr><td><a href="/api/10.html">/feedlist</a></td><td>收藏列表<label class="label label-info">☃已完成</label></td><td style="color:#1ABC9C;width: 38%">读取该饼干的所有收藏，不分页</td><td>GET</td></tr>
+       <tr><td><a href="/api/9.html">/feed/{tid}</a></td><td>收藏主题<label class="label label-info">☃已完成</label></td><td style="color:#1ABC9C;width: 38%">收藏某个主题帖</td><td>GET</td></tr>
       <tr><td><a href="/api/1.html">/cookie/webtoapp</a></td><td>饼干导入<label class="label label-info">☃已完成</label></td><td style="color:#1ABC9C;width: 38%">导入在网页端中生成的饼干到App</td><td>POST</td></tr>
       <tr><td><a href="/api/2.html">/getcookie</a></td><td>生成饼干<label class="label label-info">☃已完成</label></td><td style="color:#1ABC9C;width: 38%">在App中生成一个八位数的随机字符串用于饼干调用</td><td>GET</td></tr>
       <tr><td><a href="/api/3.html">/board/index</a></td><td>版块列表<label class="label label-info">☃已完成</label></td><td style="color:#1ABC9C;width: 38%">列出所有版块的信息，被关闭的不会显示在内</td><td>GET</td></tr>
@@ -95,12 +100,15 @@ glyphicon glyphicon-user"></span>给我们提意见</button></div>
 <div class="alert alert-success">正在开发的API&需要修改的API列表</div>
 <table class="table">
 	<thead><tr><th>名称</th><th>用途/需要更新的部分</th><th>优先级</th><th>状态</th></tr></thead>
-	<tbody><tr><td>发表新帖</td><td>update:增加饼干判断</td><td>1</td><td><label class="label label-success">文档撰写中</label></td></tr>
+	<tbody><!--<tr><td>发表新帖</td><td>update:增加饼干判断</td><td>1</td><td><label class="label label-success">文档撰写中</label></td></tr>
 	<tr><td>回复</td><td>update:增加饼干判断</td><td>1</td><td><label class="label label-success">文档撰写中</label></td></tr>
+  -->
 	<tr><td>搜索</td><td>可搜索主题帖马甲/内容/标题和回贴马甲/内容</td><td>2</td><td><label class="label label-red">开发中</label></td></tr>
-	<tr><td>收藏列表</td><td>显示某块饼干的收藏列表</td><td>2</td><td><label class="label label-red">开发中</label></td></tr>
+	<!--<tr><td>收藏列表</td><td>显示某块饼干的收藏列表</td><td>2</td><td><label class="label label-red">开发中</label></td></tr>
 	<tr><td>增加收藏</td><td>收藏主题帖</td><td>2</td><td><label class="label label-red">开发中</label></td></tr>
 	<tr><td>删除收藏</td><td>删除某一条收藏</td><td>2</td><td><label class="label label-red">开发中</label></td></tr>
+  -->
+  
 	<tr><td>举报接口</td><td>举报某一条主题/回复</td><td>2</td><td><label class="label label-red">开发中</label></td></tr>
 	</tbody>
 </table>

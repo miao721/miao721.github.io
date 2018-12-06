@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Api文档</title>
+	<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+	<table class="table">
+		<tr><td>url</td><td>/feed/{tid}</td></tr>
+		<tr><td>调用方式</td><td>GET</td></tr>
+		<tr><td>名称</td><td>添加收藏</td></tr>
+		<tr><td>示例url</td><td>/feed/123</td></tr>
+		<tr><td>必备参数</td><td>tid</td></tr>
+		<tr><td>返回信息</td><td>见下表</td></tr>
+	</table>
+	<table class="table"><thead><tr><th>Code</th><th>message</th><th>说明/debug</th></tr></thead>
+	<tbody><tr><td>10002</td><td>订阅大成功</td><td>OK</td></tr>
+	<tr><td>10004</td><td>订阅失败，主题tid参数无效</td><td>主题被删除或tid无效，请注意，收藏需要tid而非该主题的索引id</td></tr>
+	<tr><td>10004</td><td>订阅失败，您的用户编号无效</td><td>您的用户编号无效指代您的饼干不存在于饼干数据库</td></tr>
+	<tr><td>10003</td><td>您没有饼干</td><td>header头信息必须带有user_id信息且不能为空</td></tr></tbody></table>
+	</div>
+</body>
+</html>
