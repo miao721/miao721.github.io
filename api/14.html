@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>检测权限的中间api</title>
+</head>
+<body>
+<div class="container">
+	<div class="form-group">
+		<label>名称</label>：检查是否可以发帖/有权限发帖回帖
+	</div>
+	<div class="form-group">
+		<label>请求方式</label>：GET
+	</div>
+	<div class="form-group">
+		<label>必备参数</label>：fid
+	</div>
+	<div class="form-group">
+		<label>Api地址</label>：/check/user/power/fid/{fid}
+	</div>
+	<div class="form-group">
+		<label>示例地址</label>：/check/user/power/fid/5
+	</div>
+	<div class="form-group">
+		<label>返回信息</label>：见下方
+	</div>
+	<table class="table">
+		<tr><td>返回码</td><td>返回message</td><td>debug说明</td></tr>
+			<tr><td>200</td><td>您可以在本版块发帖</td><td>可以发帖，不需理会</td></tr>
+				<tr><td>200</td><td>无需审核即可发帖</td><td>可以发帖，不必理会，只要返回code为200，则该饼干可以直接发帖</td></tr>
+					<tr><td>30006</td><td>您的权限正在审核</td><td>已提交申请，但需要版主审核</td></tr>
+						<tr><td>30005</td><td>您没有权限在本版块发帖</td><td>没有申请权限且该板块为私密版块</td></tr>
+							<tr><td>30003</td><td>没有饼干</td><td>需要在header中携带userid参数</td></tr>
+							<tr><td>30004</td><td>无法寻找到版块</td><td>fid参数不正确，该板块不存在，请注意，api只会寻找status=1，也就是正常运行的版块，如果该版块被管理员关闭或者被岛主关闭，则无法被查询到</td></tr>
+	</table>
+	<div class="form-group">
+		<label style="color:red;">特别说明，此Api需要携带userid的header，也就是饼干，否则将会直接报错</label>
+	</div>
+</div>
+</body>
+</html>
