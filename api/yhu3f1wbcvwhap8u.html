@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Api文档</title>
+	<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<style type="text/css">
+	a{
+		color:#E74C3C;
+		text-decoration: none;
+	}
+	a:hover{
+		color: #C0392B;
+		text-decoration: none;
+	}
+	.label-success{
+		background-color: #2ECC71;
+	}
+	.label-red{
+background-color: #E74C3C;
+	}
+	.label-info{
+		background-color: transparent;
+		border:1px #8E44AD solid;
+		padding:3px;
+		color:#8E44AD;
+	}
+	.btn-danger {
+    border: 1px solid #f4645f;
+    background: #f4645f;
+    color: #fff;
+}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">嗨兔糯米饭</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+<li><a href="http://www.nmmnm.co">进入官网</a></li>
+      </ul>
+      <form class="navbar-form navbar-left">
+       
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div class="container" style="max-width: 1000px;margin-top: 18px;">
+<table class="table">
+<caption>调用域名请使用nmmnm.co,并且需要在url中带上前缀/api，例如:www.nmmnm.co/api/getcookie</caption>
+	<thead>
+        <tr>
+          <th>URL</th>
+          <th>名称</th>
+          <th>用途</th>
+          <th>调用方式</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><a href="/api/15.html">/hdao/smile</a></td><td>表情解析<label class="label label-info">☃已完成</label></td><td style="color:#1ABC9C;width: 38%">返回表情的fid,id和url地址</td><td>GET</td></tr>
+        <tr><td><a href="/api/14.html">/check/user/power/fid/{fid}</a></td><td>审核是否有权限发帖<label class="label label-info">☃已完成</label></td><td style="color:#1ABC9C;width: 38%">仅用于审核该饼干是否有权限发帖</td><td>GET</td></tr>
+        <tr><td><a href="/api/13.html">/regboard</a></td><td>加入此版块<label class="label label-info">☃已完成</label></td><td style="color:#1ABC9C;width: 38%">加入版块后才能进行发帖回帖操作</td><td>POST</td></tr>
+        <tr><td><a href="/api/thread.html">/newtopic</a></td><td>添加主题帖<label class="label label-info">☃已完成</label></td><td style="color:#1ABC9C;width: 38%">增加一条主题帖在某个小岛</td><td>POST</td></tr>
+         <tr><td><a href="/api/reply.html">/comment</a></td><td>回复<label class="label label-info">☃已完成</label></td><td style="color:#1ABC9C;width: 38%">回复主题帖</td><td>POST</td></tr>
+       <tr><td><a href="/api/11.html">/feed/delete/{id}</a></td><td>删除收藏<label class="label label-info">☃已完成</label></td><td style="color:#1ABC9C;width: 38%">删除某条收藏</td><td>GET</td></tr>
+       <tr><td><a href="/api/10.html">/feedlist</a></td><td>收藏列表<label class="label label-info">☃已完成</label></td><td style="color:#1ABC9C;width: 38%">读取该饼干的所有收藏，不分页</td><td>GET</td></tr>
+       <tr><td><a href="/api/9.html">/feed/{id}</a></td><td>收藏主题<label class="label label-info">☃已完成</label></td><td style="color:#1ABC9C;width: 38%">收藏某个主题帖</td><td>GET</td></tr>
+      <tr><td><a href="/api/1.html">/cookie/webtoapp</a></td><td>饼干导入<label class="label label-info">☃已完成</label></td><td style="color:#1ABC9C;width: 38%">导入在网页端中生成的饼干到App</td><td>POST</td></tr>
+      <tr><td><a href="/api/2.html">/getcookie</a></td><td>生成饼干<label class="label label-info">☃已完成</label></td><td style="color:#1ABC9C;width: 38%">在App中生成一个八位数的随机字符串用于饼干调用</td><td>GET</td></tr>
+      <tr><td><a href="/api/3.html">/board/index</a></td><td>版块列表<label class="label label-info">☃已完成</label></td><td style="color:#1ABC9C;width: 38%">列出所有版块的信息，被关闭的不会显示在内</td><td>GET</td></tr>
+       <tr><td><a href="/api/4.html">/forum/{id}</a></td><td>主题列表<label class="label label-info">☃已完成</label></td><td style="color:#1ABC9C;width: 38%">返回fid={id}的主题</td><td>GET</td></tr>
+       <tr><td><a href="/api/five.html">/sublist/{fid}</a></td><td>子论坛列表<label class="label label-info">☃已完成</label></td><td style="color:#1ABC9C;width: 38%">返回fid={fid}的所有子论坛信息</td><td>GET</td></tr>
+      <!-- <tr><td><a href="/api/reply.html">/comment</a></td><td>回复</td><td style="color:#1ABC9C;width: 38%">增加一条回复在某个帖子中</td><td>POST</td></tr>
+       <tr><td><a href="/api/7.html">/newtopic</a></td><td>发布新帖</td><td style="color:#1ABC9C;width: 38%">发布一个新的主题帖</td><td>POST</td></tr>
+       -->
+       <tr><td><a href="/api/8.html">/t/{id}</a></td><td>帖子内容</td><td style="color:#1ABC9C;width: 38%">返回id={id}的主题帖及其回复</td><td>GET</td></tr>
+       <tr><td><a href="/api/9.html">/post/board/{fid}/id/{tid}</a></td><td>帖子内容</td><td style="color:#1ABC9C;width: 38%">返回fid={fid}<b>和</b>tid={tid}的主题帖及其回复</td><td>GET</td></tr>
+       
+      </tbody>
+      
+</table>
+<div style="margin-top: 20px; margin-bottom: 10px;"><button class="btn btn-danger" Onclick="window.open('http://www.nmmnm.co/showmsg/forumid/22/id/40')">点击这里访问Api文档1.0</button>&nbsp;&nbsp;<button class="btn btn-danger" data-toggle="modal" data-target="#android">点击获取安卓App下载二维码</button>&nbsp;&nbsp;<button class="btn btn-danger" data-toggle="modal" data-target="#ios">点击获取IosApp下载二维码</button>&nbsp;&nbsp;<button class="btn btn-danger" data-toggle="modal" data-target="#feedback"><span class="
+glyphicon glyphicon-user"></span>给我们提意见</button></div>
+<div class="alert alert-success">正在开发的API&需要修改的API列表</div>
+<table class="table">
+	<thead><tr><th>名称</th><th>用途/需要更新的部分</th><th>优先级</th><th>状态</th></tr></thead>
+	<tbody><!--<tr><td>发表新帖</td><td>update:增加饼干判断</td><td>1</td><td><label class="label label-success">文档撰写中</label></td></tr>
+	<tr><td>回复</td><td>update:增加饼干判断</td><td>1</td><td><label class="label label-success">文档撰写中</label></td></tr>
+  -->
+	<tr><td>搜索</td><td>可搜索主题帖马甲/内容/标题和回贴马甲/内容</td><td>2</td><td><label class="label label-red">开发中</label></td></tr>
+	<!--<tr><td>收藏列表</td><td>显示某块饼干的收藏列表</td><td>2</td><td><label class="label label-red">开发中</label></td></tr>
+	<tr><td>增加收藏</td><td>收藏主题帖</td><td>2</td><td><label class="label label-red">开发中</label></td></tr>
+	<tr><td>删除收藏</td><td>删除某一条收藏</td><td>2</td><td><label class="label label-red">开发中</label></td></tr>
+  -->
+  
+	<tr><td>举报接口</td><td>举报某一条主题/回复</td><td>2</td><td><label class="label label-red">开发中</label></td></tr>
+	</tbody>
+</table>
+</div>
+<div align="center">对Api有任何疑问，请发送email到<a href="mailto:service@nmmnm.zj.cn">service@nmmnm.zj.cn</a></div>
+<!-- Modal -->
+<div class="modal fade" id="android" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">获取安卓下载二维码</h4>
+      </div>
+      <div class="modal-body">
+       请扫描下方二维码进行下载~<br/>
+       <center><img src="http://i4.fuimg.com/626503/493de2056b771de6.jpg" /></center>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="ios" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">获取ios下载二维码</h4>
+      </div>
+      <div class="modal-body">
+      <font color=red>我们的App正在筹备上架中~</font>如果您愿意参与测试，请您先通过app store下载testflight，随后返回本页面，点击<a href="https://testflight.apple.com/join/tJ9oZ8zh">此处</a>，此时游览器将会请求返回testflight并进入到App下载页面，点击install进行安装。
+      <p>该版本将会是上架前的最后一个版本，您可以直接进行更新，后续计划将直接透过App store进行推送~谢谢您。</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="feedback" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">意见反馈</h4>
+      </div>
+      <div class="modal-body">
+       您好，我们非常乐意接受您的意见跟鞭策，请您给我们的邮箱<a href="mailto:service@nmmnm.zj.cn">发邮件</a>。<br/>
+       您通过邮件给我们发送的求助信息/意见建议，将在三天内给予您回复
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
